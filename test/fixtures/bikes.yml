@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  brand: MyString
+  type: MyString
+  model: MyString
+  description: MyString
+  date_of_manufacture: 2010-04-05
+  size: 1
+  serial_number: MyString
+  condition: MyString
+  bill_exists: false
+  umsatteln_checked: false
+  zip: MyString
+  city: MyString
+  price: 1.5
+  title: MyString
+
+two:
+  brand: MyString
+  type: MyString
+  model: MyString
+  description: MyString
+  date_of_manufacture: 2010-04-05
+  size: 1
+  serial_number: MyString
+  condition: MyString
+  bill_exists: false
+  umsatteln_checked: false
+  zip: MyString
+  city: MyString
+  price: 1.5
+  title: MyString

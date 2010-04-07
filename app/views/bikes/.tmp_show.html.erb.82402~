@@ -1,0 +1,73 @@
+<p>
+  <b>Brand:</b>
+  <%=h @bike.brand %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @bike.type %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%=h @bike.model %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @bike.description %>
+</p>
+
+<p>
+  <b>Date of manufacture:</b>
+  <%=h @bike.date_of_manufacture %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%=h @bike.size %>
+</p>
+
+<p>
+  <b>Serial number:</b>
+  <%=h @bike.serial_number %>
+</p>
+
+<p>
+  <b>Condition:</b>
+  <%=h @bike.condition %>
+</p>
+
+<p>
+  <b>Bill exists:</b>
+  <%=h @bike.bill_exists %>
+</p>
+
+<p>
+  <b>Umsatteln checked:</b>
+  <%=h @bike.umsatteln_checked %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%=h @bike.zip %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @bike.city %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%=h @bike.price %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @bike.title %>
+</p>
+
+
+<%= link_to 'Edit', edit_bike_path(@bike) %> |
+<%= link_to 'Back', bikes_path %>

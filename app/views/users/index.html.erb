@@ -1,0 +1,27 @@
+<h1>Alle Nutzer </h1>
+
+
+<p>Du bist eingeloggt als <strong><%= current_user.login %></strong>. <%= link_to 'Ausloggen', logout_path, :confirm => 'Are you sure?', :method => :delete %></p>
+
+
+<table>
+  <tr>
+    <th>Login </th>
+    <th>Email </th>
+    <th>Registriert am </th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%=h user.login %></td>
+    <td><%=h user.email %></td>
+    <td><%=l user.created_at, :format => :default %></td>
+    <td><%= "gerade angemeldet" if user == current_user %></td>
+	<td><%= link_to 'Ausloggen', logout_path, :confirm => 'Are you sure?', :method => :delete if user == current_user%></td>
+  </tr>
+<% end %>
+</table>
+
+<br/><br/>
+
+<%= link_to "zur Startseite", "/" %>

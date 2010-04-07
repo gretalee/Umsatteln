@@ -1,0 +1,7 @@
+Herzlich Willkommen<%= " #{current_user.login}" if logged_in? %>!
+
+<% unless logged_in? %>
+<%= render(:partial => "sessions/login_form") %>
+<% else %>
+<p><%= link_to 'Ausloggen', logout_path, :confirm => 'Are you sure?', :method => :delete %></p>
+<% end %>

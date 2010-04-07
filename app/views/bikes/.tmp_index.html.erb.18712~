@@ -1,0 +1,46 @@
+<h1>Listing bikes</h1>
+
+<table>
+  <tr>
+    <th>Brand</th>
+    <th>Type</th>
+    <th>Model</th>
+    <th>Description</th>
+    <th>Date of manufacture</th>
+    <th>Size</th>
+    <th>Serial number</th>
+    <th>Condition</th>
+    <th>Bill exists</th>
+    <th>Umsatteln checked</th>
+    <th>Zip</th>
+    <th>City</th>
+    <th>Price</th>
+    <th>Title</th>
+  </tr>
+
+<% @bikes.each do |bike| %>
+  <tr>
+    <td><%=h bike.brand %></td>
+    <td><%=h bike.type %></td>
+    <td><%=h bike.model %></td>
+    <td><%=h bike.description %></td>
+    <td><%=h bike.date_of_manufacture %></td>
+    <td><%=h bike.size %></td>
+    <td><%=h bike.serial_number %></td>
+    <td><%=h bike.condition %></td>
+    <td><%=h bike.bill_exists %></td>
+    <td><%=h bike.umsatteln_checked %></td>
+    <td><%=h bike.zip %></td>
+    <td><%=h bike.city %></td>
+    <td><%=h bike.price %></td>
+    <td><%=h bike.title %></td>
+    <td><%= link_to 'Show', bike %></td>
+    <td><%= link_to 'Edit', edit_bike_path(bike) %></td>
+    <td><%= link_to 'Destroy', bike, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New bike', new_bike_path %>

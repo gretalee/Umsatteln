@@ -1,0 +1,70 @@
+de:
+  are_you_sure: 'Bist du sicher?'
+  here: 'hier'
+  
+  startpage:
+    headline_welcome: 'Herzlich Willkommen'
+
+  registration:
+    headline_registration: 'Registrierung'
+    btn_sign_up: Registrieren!
+    link_to_registration: "Wenn du noch keinen Account hast, geht's {{link}} zur Registrierung!"
+    message_registration_and_activation_mail: 'Danke für deine Anmeldung! Du bekommst demnächst eine E-Mail mit deinem Activierungs-Code.'
+    message_successfully_recent_activation_mail: 'Deine Aktivierungs-Mail wurde noch mal verschickt. Aktiviere deinen Account durch Klicken des Links in der Mail!'
+    error_registration: 'Entschuldigung, irgendetwas ist bei deiner Anmeldung schief gelaufen. Bitte versuch es noch mal oder kontaktiere unseren Support!'
+    subject_activate: 'Aktiviere deinen neuen Account!'
+    subject_activation_complete: 'Dein Account ist jetzt fertig eingerichtet.'
+    message_registration_complete: 'Super, du hast dich erfolgreich angemeldet! Jetzt log dich ein, um weiterzumachen.'
+    message_new_account: 'Dein Nutzerkonto wurde angelegt.'
+    message_activation_link: 'Klicke diesen Link, um dein Konto zu aktivieren:'
+    message_account_activated: '{{user_login}}, dein Account wurde aktiviert. Willkommen an Board!'
+    error_missing_activation_code: 'Dein Aktivierungs-Code fehlt. Versuchs noch mal mit dem Link in deienr E-Mail!'
+    error_no_activation_code: 'Wir konnten keinen Nutzer mit diesem Aktivierungs-Code finden -- prüfe mal deine E-Mail! Vielleicht bist du aber auch schon aktiviert? Versuch mal dich einzuloggen!'
+  
+  login:
+    headline_login: 'Anmelden'
+    btn_login: 'Anmelden!'
+    logout: 'Ausloggen'
+    message_login_successfully: 'Du hast dich erfolgreich eingeloggt.'
+    message_logged_out: 'Du bist ausgeloggt.'
+    message_not_activated: 'Dein Account ist noch nicht aktiviert.<br/> Bitte klicke den Link in deiner Aktivierungs-E-Mail an, um deinen Zugang freizuschalten.'
+    message_login_failed: 'Dein Login/Passwort funktioniert nicht.'
+    message_resend_activation: "<a href=\"/users/resend_activation/{{user_id}}\">&gt;&gt; Aktivierungscode erneut verschicken?</a>"
+  
+  user:  
+    label_login: 'Benutzername'
+    label_password: 'Passwort'
+    label_email: 'E-Mail-Adresse'
+    label_password_repeat: 'Passwort'
+    label_remember_me: 'Login behalten'
+    login: 'Benutzername'
+    password: 'Passwort'
+  
+  # see http://guides.rubyonrails.org/i18n.html#translations-for-active-record-models
+  activerecord:
+      errors: 
+          models: 
+              user: 
+                  attributes:
+                      login:
+                          blank: "Du musst einen Loginnamen eingeben!"
+                          too_short: "Dein Login ist zu kurz (min {{count}} Zeichen)!"
+                          too_long: "Dein Login ist zu lang (max {{count}} Zeichen)!"
+                          invalid: "Bitte gib einen gültigen Login ein (Buchstaben, Zahlen und .-_@)!"
+                      name:
+                          too_long: "Dein Name ist zu lang (max {{count}} Zeichen)!"
+                          invalid: "Bitte gib einen gültigen Namen ein (avoid non-printing characters and \\&gt;&lt;&amp;/)!"
+                      email:
+                          blank: "Du musst eine E-Mail-Adresse eingeben!"
+                          no_unique_email: "Die E-Mail-Adresse gibts leider schon"
+                          too_short: "Deine E-Mail-Adresse ist zu kurz (min {{count}} Zeichen)!"
+                          too_long: "Deine E-Mail-Adresse ist zu lang (max {{count}} Zeichen)!"
+                          invalid: "Deine E-Mail-Adresse sieht nicht wie eine richtige E-Mail-Adresse aus!"
+                      password:
+                          blank: "Du musst ein Passwort eingeben!"
+                          too_short: "Dein Passwort ist zu kurz (min {{count}} Zeichen)!"
+                          too_long: "Dein Passwort ist zu lang (max {{count}} Zeichen)!"
+                          confirmation: "Du hast dein Passwort nicht richtig wiederholt."
+                      password_confirmation:
+                          blank: "Bitte wiederhole dein Passwort!"
+                          

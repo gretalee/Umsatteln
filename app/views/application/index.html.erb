@@ -1,0 +1,7 @@
+<h1><%= t('startpage.headline_welcome') %><%= " #{current_user.login}" if logged_in? %>!</h1>
+
+<% unless logged_in? %>
+<%= render(:partial => "sessions/login_form") %>
+<% else %>
+<p><%= link_to t('login.logout'), logout_path, :confirm => t('are_you_sure'), :method => :delete %></p>
+<% end %>
