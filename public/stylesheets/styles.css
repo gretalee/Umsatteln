@@ -2,7 +2,7 @@ html {
 	height: 100%; margin-bottom: 1px; /* immer scrollbalken */
 	display: block;  
 }
-a, body, fieldset, form, h1, h2, h3, h4, h5, h6, img, label, li, ol, option, p,select, table, td, th, ul { 
+a, body, fieldset, form, h1, h2, h3, h4, h5, h6, img, label, li, ol, option, p, table, td, th, ul { 
 	margin:0; 
 	border:0; 
 	padding:0; 
@@ -12,12 +12,19 @@ body,td,th,p,a,ul,ol,li,h1,h2,h3,h4,h5,h6, input,select, textarea, div, span {
 	font-size:12px; 
 	color:#333; 
 }
+select {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
 body { 
 	background-color: #fff; 
 	text-align:left; 
 	padding:10px;
 }
-.clear {
+.clr {
 	clear:both; 
 	height:1px;
 	overflow:hidden;
@@ -25,12 +32,32 @@ body {
 a {color:#5E7B99;text-decoration:none;font-weight:bold;}
 a:hover {color:#8F8F5A;}
 
-h1 {color:#5E7B99; font-weight:bold; font-size:30px;margin:10px 0 30px 0;}
-h1 a {color:#5E7B99; font-weight:bold; font-size:30px;margin:10px 0 30px 0;}
+h1 {color:#5E7B99; font-size:28px; font-weight:bold; margin:20px 0 15px;}
 h2 {color:#5E7B99; font-size:16px; font-weight:bold; margin:15px 0 15px 0;}
 h3 {color:#5E7B99; font-weight:bold; font-size:15px;margin:10px 0 15px 0;}
 h4 {color:#5E7B99; font-weight:600; font-size:13px;margin:10px 0 10px 0;}
 
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.tar {
+  text-align: right;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.pt10 {
+  padding-top: 10px;
+}
+.pt20 {
+  padding-top: 20px;
+}
 .flash_notice {
   font-weight: bold;
   color: #0f0;
@@ -47,8 +74,13 @@ form div {
 form label {
     font-weight: bold;
 }
-form input {
+form input,
+form select,
+form textarea {
     margin: 2px 0;
+}
+form select option {
+  padding-right: 15px;
 }
 .fieldWithErrors {
     margin-bottom: 0px;
@@ -63,3 +95,87 @@ form input {
 .formError {
     color: red;
 }
+
+
+/* HEADER
+========================================================== */
+
+#header,
+#content,
+#footer {
+  margin: 10px 20px 10px 10px;
+}
+#header p {
+  float: right;
+}
+#header p a {
+  padding-left: 10px;
+}
+.logo {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+#menu {
+  margin:10px 0;
+}
+#menu ul {
+  border-left:1px solid #CCCCCC;
+  display:block;
+  overflow:visible;
+}
+#menu ul li {
+  border-right:1px solid #CCCCCC;
+  float:left;
+  margin-right:10px;
+  padding-right:10px;
+}
+
+
+/* CONTENT
+========================================================== */
+#content {
+  margin-bottom: 30px;  
+}
+
+#bike_form {
+  display: block;
+  width: 350px;
+}
+#bike_form p {
+  height: 44px;
+}
+#bike_form p.big {
+  height: 130px;
+}
+#bike_form .text {
+  width: 99%;
+}
+#bike_form select.text {
+  height:20px;
+  width:100%;
+}
+#bike_form .perc_30 {
+  width: 29%;
+}
+#bike_form .perc_70 {
+  width: 69%;
+}
+
+
+/* FOOTER
+========================================================== */
+#footer {
+  border-top: 1px solid #ccc;
+  color: #ccc;
+  padding: 3px 0;
+  text-align: right;
+}
+#footer a {
+  font-weight: normal;
+  color: #ccc;
+}
+#footer a:hover {
+  color: #aaa;
+}
+
+

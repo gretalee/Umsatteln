@@ -1,60 +1,89 @@
-<% form_for(@bike) do |f| %>
+<% form_for(@bike, :html => { :id => 'bike_form' }) do |f| %>
+  
   <%= f.error_messages %>
 
   <p>
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class => 'text' %>
   </p>
-  <p>
+  <p class="big">
     <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :class => 'text', :rows => 6, :cols => 40 %>
   </p>
   
   <p>
     <%= f.label :brand %><br />
-    <%= f.text_field :brand %>
+    <%= f.text_field :brand, :class => 'text' %>
   </p>
   <p>
     <%= f.label :model %><br />
-    <%= f.text_field :model %>
+    <%= f.text_field :model, :class => 'text' %>
   </p>
   <p>
     <%= f.label :type_of_bike %><br />
-    <%= f.text_field :type_of_bike %>
+    <%= select(@bike, :type_of_bike, [
+                        ['Alle' , ''],
+                        ['Damenrad' , 'ladies'], 
+                        ['Herrenrad' , 'gents'], 
+                        ['Sportrad' , 'sports'], 
+                        ['Mountainbike' , 'mountain'],
+                        ['BMX' , 'bmx'],
+                        ['Trekking' , 'trekking'],
+                        ['Rennrad' , 'racer'],
+                        ['Cruiser' , 'cruiser'],
+                        ['Custom bike' , 'custom'],
+                        ['Kinderrad' , 'childrens']
+                      ], {}, {:class => 'text'})  %>
   </p>
-  <p>
+  <p class="fl perc_70">
     <%= f.label :date_of_manufacture %><br />
     <%= f.date_select :date_of_manufacture %>
   </p>
-  <p>
-    <%= f.label :size %><br />
-    <%= f.text_field :size %>
-  </p>
-  <p>
-    <%= f.label :serial_number %><br />
-    <%= f.text_field :serial_number %>
-  </p>
-  <p>
+  
+  <p class="fr perc_30">
     <%= f.label :condition %><br />
-    <%= f.text_field :condition %>
+    <select name="bike[condition]" class="text">
+      <%= options_for_select({ "neu" => "new", "gebraucht" => "used" }, @bike.condition) %>
+    </select>
   </p>
-  <p>
+  <p class="fl perc_30">
+    <%= f.label :size %><br />
+    <select name="bike[size]" class="text">    
+      <%= options_for_select([
+                      ['Alle' , ''],
+                      ['< 12' , 'min'],
+                      ['12' , '12'],
+                      ['16' , '16'],
+                      ['18' , '18'],
+                      ['20' , '20'],
+                      ['24' , '24'],
+                      ['26' , '26'],
+                      ['28' , '28'],
+                      ['> 28' , 'max']
+                      ], @bike.size )  %>
+    </select>
+  </p>
+  <p class="fr perc_70">
+    <%= f.label :serial_number %><br />
+    <%= f.text_field :serial_number, :class => 'text' %>
+  </p>
+  <p class="fl perc_30">
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip, :class => 'text' %>
+  </p>
+  <p class="fr perc_70">
+    <%= f.label :city %><br />
+    <%= f.text_field :city, :class => 'text' %>
+  </p>
+  <p class="fl perc_30">
     <%= f.label :bill_exists %><br />
     <%= f.check_box :bill_exists %>
   </p>
-  <p>
-    <%= f.label :zip %><br />
-    <%= f.text_field :zip %>
-  </p>
-  <p>
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
-  </p>
-  <p>
+  <p class="fr perc_70">
     <%= f.label :price %><br />
-    <%= f.text_field :price %>
+    <%= f.text_field :price, :class => 'text' %>
   </p>
-  <p>
-    <%= f.submit 'Create' %>
+  <p class="clr tar pt10">
+    <%= f.submit 'Speichern' %>
   </p>
 <% end %>

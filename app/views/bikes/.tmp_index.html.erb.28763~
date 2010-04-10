@@ -43,5 +43,4 @@
 
 <br />
 
-<%= link_to 'New bike', new_bike_path %><br />
-<%= link_to "zur Startseite", "/" %>
+<%= link_to 'New bike', new_bike_path %>

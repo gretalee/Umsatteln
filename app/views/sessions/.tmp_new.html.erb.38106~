@@ -1,0 +1,3 @@
+<h1><%= t('login.headline_login') %></h1>
+
+<%= render(:partial => "login_form") %>

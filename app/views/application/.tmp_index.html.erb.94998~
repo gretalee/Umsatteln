@@ -3,6 +3,5 @@
 <% unless logged_in? %>
 <%= render(:partial => "sessions/login_form") %>
 <% else %>
-Hier steht der Content ...<br />
-
+<p><%= link_to t('login.logout'), logout_path, :confirm => t('are_you_sure'), :method => :delete %></p>
 <% end %>

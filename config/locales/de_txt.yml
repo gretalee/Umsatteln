@@ -6,6 +6,7 @@ de:
     headline_welcome: 'Herzlich Willkommen'
 
   registration:
+    registration: 'Anmelden'
     headline_registration: 'Registrierung'
     btn_sign_up: Registrieren!
     link_to_registration: "Wenn du noch keinen Account hast, geht's {{link}} zur Registrierung!"

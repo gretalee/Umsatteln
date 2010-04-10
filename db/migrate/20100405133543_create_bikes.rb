@@ -7,7 +7,7 @@ class CreateBikes < ActiveRecord::Migration
       t.string :model
       t.string :description
       t.date :date_of_manufacture
-      t.integer :size
+      t.string :size
       t.string :serial_number
       t.string :condition
       t.boolean :bill_exists

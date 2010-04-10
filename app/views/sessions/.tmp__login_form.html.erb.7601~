@@ -1,0 +1,23 @@
+<%= flash_notice %>
+
+<%= error_messages_for :session %>
+
+<% form_tag session_path do -%>
+
+    <div><%= label_tag 'login', t('user.label_login') %><br />
+    <%= text_field_tag 'login', @login %>
+    <%= error_message_on :user, :login %></div>
+    
+    <div><%= label_tag 'password', t('user.label_password') %><br/>
+    <%= password_field_tag 'password', nil %>
+    <%= error_message_on :user, :password %></div>
+    
+    <div><%= label_tag 'remember_me', t('user.label_remember_me') %>
+    <%= check_box_tag 'remember_me', '1', @remember_me %></div>
+    
+    <div><%= submit_tag t('login.btn_login') %></div>
+    
+<% end -%>
+
+<br/><br/>
+<p><%= t('registration.link_to_registration', {:link => link_to(t(:here), signup_path)}) %></p>

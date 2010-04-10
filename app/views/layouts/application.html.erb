@@ -20,8 +20,27 @@
 
 </head>
 <body>
-
-    <%= yield :layout %>
-
+  <div id="header">  
+    <div><a href="/" class="logo">umsatteln.com</a> Deutschlands bequemster Fahrradkauf</div>
+    <p>Eingeloggt: <%= current_user.login %> 
+    <%= link_to '[Ausloggen]', logout_path, :confirm => 'Are you sure?', :method => :delete %></p>
+    <div id="menu">
+      <ul>
+        <li><%= link_to 'Suchen', bikes_path, :title => 'Fahrrad suchen' %></li>
+        <li><%= link_to 'Anbieten', new_bike_path, :title=> 'Anbieten' %></li>
+        <li><%= link_to 'Händler', '/', :title=> 'Infos für Händler' %></li>
+        <li><% if logged_in? %><%= link_to "Dein Account", "/" %><%else%><%= link_to(t("registration.registration"), signup_path) %><%end%></li>
+      </ul>
+      <br class="clr" />
+    </div>
+  </div><!-- end of id="header" -->
+  
+  <div id="content">
+  <%= yield :layout %>
+  </div>
+  
+  <div id="footer">
+    &copy; umsatteln.com | <a href="#">Impressum</a>
+  </div><!-- end of id="footer" -->
 </body>
 </html>
